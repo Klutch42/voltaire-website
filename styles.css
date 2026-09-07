@@ -30,6 +30,7 @@ button, input { font: inherit; }
   border-bottom: 1px solid var(--line);
 }
 .nav { min-height: 84px; display: flex; align-items: center; justify-content: space-between; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
 .brand { display: inline-flex; align-items: center; gap: 13px; }
 .brand img { width: 28px; height: 28px; object-fit: cover; }
 .brand span, .journal-link, .eyebrow, .panel-index, .section-label, .availability, .form-note, .footer-meta {
@@ -45,20 +46,23 @@ button, input { font: inherit; }
 
 .hero {
   min-height: calc(100vh - 84px);
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(340px, 0.65fr);
-  gap: clamp(52px, 8vw, 132px);
-  align-items: end;
-  padding-block: clamp(82px, 11vh, 132px) clamp(76px, 10vh, 116px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 58px;
+  padding-block: 82px;
+  text-align: center;
 }
-.eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 28px; color: var(--muted); font-size: 10px; }
+.hero-copy { width: 100%; }
+.eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 24px; color: var(--muted); font-size: 10px; }
 .signal { width: 6px; height: 6px; border-radius: 50%; background: var(--paper); box-shadow: 0 0 0 5px rgba(246,244,238,.08); }
-h1 { margin: 0; font-family: "Instrument Serif", serif; font-size: clamp(65px, 7.8vw, 112px); font-weight: 400; letter-spacing: -0.045em; line-height: 0.88; }
+h1 { margin: 0; font-family: "Instrument Serif", serif; font-size: clamp(68px, 8.2vw, 118px); font-weight: 400; letter-spacing: -0.045em; line-height: 0.88; }
 h1 em { color: var(--muted); font-weight: 400; }
-.waitlist-panel { align-self: end; border-top: 1px solid var(--line-strong); padding-top: 20px; }
+.waitlist-panel { width: min(100%, 520px); border: 1px solid var(--line); padding: 34px 36px 30px; text-align: left; }
 .panel-index { margin: 0 0 62px; color: var(--muted); font-size: 9px; }
-.waitlist-panel h2 { max-width: 360px; margin: 0 0 16px; font-family: "Instrument Serif", serif; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.02; letter-spacing: -0.02em; }
-.panel-copy { max-width: 420px; margin: 0 0 34px; color: var(--muted); font-size: 13px; }
+.waitlist-panel h2 { margin: 0 0 8px; font-family: "Instrument Serif", serif; font-size: clamp(32px, 3vw, 42px); font-weight: 400; line-height: 1.02; letter-spacing: -0.02em; }
+.panel-copy { margin: 0 0 24px; color: var(--muted); font-size: 12px; }
 .waitlist-form label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 .form-row { display: grid; grid-template-columns: 1fr auto; border-bottom: 1px solid var(--line-strong); }
 .form-row:focus-within { border-color: var(--paper); }
@@ -70,38 +74,28 @@ button:hover span { transform: translateX(4px); }
 .form-note, .form-status { margin: 11px 0 0; color: #71868c; font-size: 8px; }
 .form-status { min-height: 1.6em; color: var(--paper); text-transform: none; }
 
-.principles { border-top: 1px solid var(--line); padding-block: 92px; }
-.principle-grid { display: grid; grid-template-columns: 1fr 2.2fr 0.7fr; gap: 60px; align-items: start; }
-.section-label, .availability { margin: 7px 0 0; color: var(--muted); font-size: 9px; }
-.manifesto { max-width: 780px; margin: 0; font-family: "Instrument Serif", serif; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; }
-.availability { text-align: right; line-height: 1.8; }
-.availability span { color: #71868c; }
-
 .site-footer { border-top: 1px solid var(--line); background: var(--ink-deep); padding-block: 72px 34px; }
-.footer-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 60px; }
-.wordmark { display: block; width: min(540px, 60vw); height: auto; }
+.footer-grid { display: flex; justify-content: center; align-items: center; gap: clamp(44px, 8vw, 110px); }
+.wordmark { display: block; width: min(260px, 34vw); height: auto; }
 .footer-meta { color: var(--muted); font-size: 8px; text-align: right; }
 .footer-meta p { margin: 8px 0 0; }
+.footer-meta .footer-statement { margin: 0 0 30px; color: var(--paper); font-family: "Instrument Serif", serif; font-size: clamp(30px, 3.5vw, 48px); line-height: .95; letter-spacing: -0.025em; text-transform: none; }
 
 @media (max-width: 900px) {
   .shell { width: min(100% - 40px, 1240px); }
-  .hero { min-height: auto; grid-template-columns: 1fr; gap: 80px; padding-block: 80px; }
-  .waitlist-panel { max-width: 540px; }
-  .panel-index { margin-bottom: 40px; }
-  .principle-grid { grid-template-columns: 1fr; gap: 32px; }
-  .availability { text-align: left; }
+  .hero { min-height: calc(100vh - 84px); gap: 52px; padding-block: 72px; }
 }
 @media (max-width: 560px) {
   .nav { min-height: 70px; }
   .brand span { display: none; }
   .hero { padding-block: 64px 72px; }
   h1 { font-size: clamp(54px, 16vw, 76px); }
+  .waitlist-panel { padding: 28px 24px 24px; }
   .form-row { grid-template-columns: 1fr; }
   button { padding-left: 0; text-align: left; }
-  .principles { padding-block: 68px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 38px; }
-  .wordmark { width: 100%; }
-  .footer-meta { text-align: left; }
+  .footer-grid { flex-direction: column; gap: 38px; }
+  .wordmark { width: min(250px, 78vw); }
+  .footer-meta { text-align: center; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
