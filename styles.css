@@ -33,7 +33,7 @@ button, input { font: inherit; }
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .brand { display: inline-flex; align-items: center; gap: 13px; }
 .brand img { width: 28px; height: 28px; object-fit: cover; }
-.brand span, .journal-link, .eyebrow, .panel-index, .section-label, .availability, .form-note, .footer-meta {
+.brand span, .journal-link, .footer-meta {
   font-family: "DM Mono", monospace;
   text-transform: uppercase;
   letter-spacing: 0.09em;
@@ -55,14 +55,11 @@ button, input { font: inherit; }
   text-align: center;
 }
 .hero-copy { width: 100%; }
-.eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 24px; color: var(--muted); font-size: 10px; }
-.signal { width: 6px; height: 6px; border-radius: 50%; background: var(--paper); box-shadow: 0 0 0 5px rgba(246,244,238,.08); }
 h1 { margin: 0; font-family: "Instrument Serif", serif; font-size: clamp(68px, 8.2vw, 118px); font-weight: 400; letter-spacing: -0.045em; line-height: 0.88; }
 h1 em { color: var(--muted); font-weight: 400; }
 .waitlist-panel { width: min(100%, 520px); border: 1px solid var(--line); padding: 34px 36px 30px; text-align: left; }
-.panel-index { margin: 0 0 62px; color: var(--muted); font-size: 9px; }
 .waitlist-panel h2 { margin: 0 0 8px; font-family: "Instrument Serif", serif; font-size: clamp(32px, 3vw, 42px); font-weight: 400; line-height: 1.02; letter-spacing: -0.02em; }
-.panel-copy { margin: 0 0 24px; color: var(--muted); font-size: 12px; }
+.waitlist-panel h2 + .waitlist-form { margin-top: 24px; }
 .waitlist-form label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 .form-row { display: grid; grid-template-columns: 1fr auto; border-bottom: 1px solid var(--line-strong); }
 .form-row:focus-within { border-color: var(--paper); }
@@ -71,13 +68,11 @@ input::placeholder { color: #71868c; }
 button { border: 0; background: transparent; color: var(--paper); padding: 13px 0 13px 18px; font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; cursor: pointer; }
 button span { display: inline-block; margin-left: 8px; transition: transform 180ms ease; }
 button:hover span { transform: translateX(4px); }
-.form-note, .form-status { margin: 11px 0 0; color: #71868c; font-size: 8px; }
-.form-status { min-height: 1.6em; color: var(--paper); text-transform: none; }
+.form-status { min-height: 1.6em; margin: 11px 0 0; color: var(--paper); font-size: 11px; }
 
 .site-footer { border-top: 1px solid var(--line); background: var(--ink-deep); padding-block: 72px 34px; }
-.footer-grid { display: flex; justify-content: center; align-items: center; gap: clamp(44px, 8vw, 110px); }
-.wordmark { display: block; width: min(260px, 34vw); height: auto; }
-.footer-meta { color: var(--muted); font-size: 8px; text-align: right; }
+.footer-grid { display: flex; justify-content: center; align-items: center; }
+.footer-meta { color: var(--muted); font-size: 8px; text-align: center; }
 .footer-meta p { margin: 8px 0 0; }
 .footer-meta .footer-statement { margin: 0 0 30px; color: var(--paper); font-family: "Instrument Serif", serif; font-size: clamp(30px, 3.5vw, 48px); line-height: .95; letter-spacing: -0.025em; text-transform: none; }
 
@@ -93,8 +88,6 @@ button:hover span { transform: translateX(4px); }
   .waitlist-panel { padding: 28px 24px 24px; }
   .form-row { grid-template-columns: 1fr; }
   button { padding-left: 0; text-align: left; }
-  .footer-grid { flex-direction: column; gap: 38px; }
-  .wordmark { width: min(250px, 78vw); }
   .footer-meta { text-align: center; }
 }
 @media (prefers-reduced-motion: reduce) {
