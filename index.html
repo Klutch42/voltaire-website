@@ -40,18 +40,19 @@
           <h2 id="overture-title">Introducing<br /><em>Voltaire Overture.</em></h2>
           <p>Add intelligence to your music discovery.</p>
           <div class="overture-actions">
-            <button class="overture-action primary" type="button" data-waitlist-cta>Join waitlist</button>
-            <button class="overture-action secondary" type="button" data-waitlist-cta>Request early access</button>
+            <button class="overture-action primary" type="button" data-waitlist-cta>Try Overture</button>
+            <button class="overture-action secondary" type="button" data-waitlist-cta>
+              <span data-platform-label>Download for desktop</span>
+              <span class="platform-icon" data-platform-icon aria-hidden="true"></span>
+            </button>
           </div>
         </section>
 
-        <div class="waitlist-panel" id="waitlist" hidden>
-          <h2>Join our waitlist.</h2>
-          <button class="waitlist-trigger" type="button" data-open-waitlist aria-expanded="false" aria-controls="waitlist-form">
-            Join waitlist <span aria-hidden="true">→</span>
-          </button>
-
-          <form class="waitlist-form" id="waitlist-form" data-waitlist novalidate hidden>
+        <dialog class="waitlist-dialog" data-waitlist-dialog aria-labelledby="waitlist-title">
+          <button class="modal-close" type="button" data-close-waitlist aria-label="Close waitlist form">×</button>
+          <div class="waitlist-panel" id="waitlist">
+            <h2 id="waitlist-title">Join our waitlist.</h2>
+            <form class="waitlist-form" id="waitlist-form" data-waitlist novalidate>
             <div class="name-fields">
               <div class="field">
                 <label for="first-name">First name</label>
@@ -76,12 +77,13 @@
             </fieldset>
             <button class="submit-waitlist" type="submit">Submit <span aria-hidden="true">→</span></button>
             <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-          </form>
+            </form>
 
-          <div class="waitlist-success" data-waitlist-success hidden>
-            <p>Thank you.</p>
+            <div class="waitlist-success" data-waitlist-success hidden>
+              <p>Thank you.</p>
+            </div>
           </div>
-        </div>
+        </dialog>
       </section>
 
     </main>

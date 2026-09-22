@@ -64,14 +64,21 @@ h1 em { color: var(--muted); font-weight: 400; }
 .overture-intro h2 em { color: var(--muted); font-weight: 400; }
 .overture-intro p { margin: 22px 0 0; color: var(--muted); font-size: 14px; }
 .overture-actions { display: flex; justify-content: center; gap: 12px; margin-top: 30px; }
-.overture-action { min-width: 172px; border: 1px solid var(--line-strong); padding: 13px 20px; text-align: center; transition: background 160ms ease, color 160ms ease, border-color 160ms ease; }
+.overture-action { min-width: 202px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--line-strong); padding: 14px 24px; text-align: center; transition: background 160ms ease, color 160ms ease, border-color 160ms ease; }
 .overture-action.primary { background: var(--paper); color: var(--ink); border-color: var(--paper); }
 .overture-action.secondary { background: transparent; color: var(--paper); }
 .overture-action.primary:hover { background: transparent; color: var(--paper); }
 .overture-action.secondary:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
-.waitlist-panel { width: min(100%, 520px); border: 1px solid var(--line); padding: 34px 36px 30px; text-align: left; }
+.platform-icon { position: relative; flex: 0 0 14px; width: 14px; height: 14px; margin-left: 0; }
+.platform-icon[data-platform="macos"]::before { content: ""; position: absolute; inset: -5px 0 0; font-family: Arial, sans-serif; font-size: 17px; line-height: 1; }
+.platform-icon[data-platform="windows"] { background: linear-gradient(currentColor 0 0) 0 0/6px 6px no-repeat, linear-gradient(currentColor 0 0) 8px 0/6px 6px no-repeat, linear-gradient(currentColor 0 0) 0 8px/6px 6px no-repeat, linear-gradient(currentColor 0 0) 8px 8px/6px 6px no-repeat; }
+.platform-icon[data-platform="desktop"] { display: none; }
+.waitlist-dialog { width: min(520px, calc(100% - 32px)); max-height: calc(100vh - 32px); overflow: auto; border: 1px solid var(--line-strong); background: var(--ink-deep); color: var(--paper); padding: 0; }
+.waitlist-dialog::backdrop { background: rgba(2, 14, 19, .78); backdrop-filter: blur(8px); }
+.modal-close { position: absolute; z-index: 2; top: 15px; right: 18px; padding: 3px 7px; color: var(--muted); font-family: "Manrope", sans-serif; font-size: 22px; font-weight: 300; line-height: 1; }
+.modal-close:hover { color: var(--paper); }
+.waitlist-panel { width: 100%; padding: 42px 40px 34px; text-align: left; }
 .waitlist-panel h2 { margin: 0 0 8px; font-family: "Instrument Serif", serif; font-size: clamp(32px, 3vw, 42px); font-weight: 400; line-height: 1.02; letter-spacing: -0.02em; }
-.waitlist-trigger { width: 100%; display: flex; justify-content: space-between; margin-top: 24px; border: 0; border-bottom: 1px solid var(--line-strong); background: transparent; color: var(--paper); padding: 13px 0; text-align: left; }
 .waitlist-form { margin-top: 30px; }
 .name-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .field { margin-bottom: 22px; border-bottom: 1px solid var(--line); }
@@ -88,8 +95,8 @@ h1 em { color: var(--muted); font-weight: 400; }
 .role-options input:checked + span { background: var(--paper); color: var(--ink); }
 .role-options input:focus-visible + span { outline: 1px solid var(--paper); outline-offset: -3px; }
 button { border: 0; background: transparent; color: var(--paper); padding: 13px 0; font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; cursor: pointer; }
-button span { display: inline-block; margin-left: 8px; transition: transform 180ms ease; }
-button:hover span { transform: translateX(4px); }
+.submit-waitlist span { display: inline-block; margin-left: 8px; transition: transform 180ms ease; }
+.submit-waitlist:hover span { transform: translateX(4px); }
 .submit-waitlist { width: 100%; border-bottom: 1px solid var(--line-strong); text-align: left; }
 .form-status { min-height: 1.6em; margin: 11px 0 0; color: var(--paper); font-size: 11px; }
 .waitlist-success { margin-top: 28px; border-top: 1px solid var(--line-strong); padding-top: 20px; }
