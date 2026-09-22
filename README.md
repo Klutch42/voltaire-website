@@ -14,6 +14,6 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
-## Waitlist delivery
+## Temporary waitlist storage
 
-GitHub Pages cannot securely store form submissions on its own. The current form opens a pre-addressed email confirmation. Replace the handler in `site.js` with a dedicated form provider or API endpoint when the waitlist backend is chosen.
+GitHub Pages cannot securely store form submissions on its own. The current waitlist stores entries only in the submitting browser's local storage and can export those local entries as JSON. It is intended for testing and must be replaced with a private database or form backend before collecting signups from real visitors.

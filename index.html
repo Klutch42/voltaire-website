@@ -38,14 +38,43 @@
 
         <div class="waitlist-panel" id="waitlist">
           <h2>Join our waitlist.</h2>
-          <form class="waitlist-form" data-waitlist novalidate>
-            <label for="email">Email address</label>
-            <div class="form-row">
-              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@domain.com" required />
-              <button type="submit">Join waitlist <span aria-hidden="true">→</span></button>
+          <button class="waitlist-trigger" type="button" data-open-waitlist aria-expanded="false" aria-controls="waitlist-form">
+            Join waitlist <span aria-hidden="true">→</span>
+          </button>
+
+          <form class="waitlist-form" id="waitlist-form" data-waitlist novalidate hidden>
+            <div class="name-fields">
+              <div class="field">
+                <label for="first-name">First name</label>
+                <input id="first-name" name="firstName" type="text" autocomplete="given-name" required />
+              </div>
+              <div class="field">
+                <label for="last-name">Last name</label>
+                <input id="last-name" name="lastName" type="text" autocomplete="family-name" required />
+              </div>
             </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
+            </div>
+            <fieldset class="role-field">
+              <legend>I am a</legend>
+              <div class="role-options">
+                <label><input type="radio" name="role" value="student" required /><span>Student</span></label>
+                <label><input type="radio" name="role" value="researcher" /><span>Researcher</span></label>
+                <label><input type="radio" name="role" value="user" /><span>User</span></label>
+              </div>
+            </fieldset>
+            <button class="submit-waitlist" type="submit">Submit <span aria-hidden="true">→</span></button>
             <p class="form-status" data-form-status role="status" aria-live="polite"></p>
           </form>
+
+          <div class="waitlist-success" data-waitlist-success hidden>
+            <p>You’re on the list.</p>
+            <button class="text-button" type="button" data-add-another>Add another entry</button>
+          </div>
+
+          <button class="export-button" type="button" data-export-waitlist hidden>Download local signups (.json)</button>
         </div>
       </section>
 
