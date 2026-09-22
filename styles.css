@@ -58,6 +58,10 @@ button, input { font: inherit; }
 .hero-copy { width: 100%; }
 h1 { margin: 0; font-family: "Instrument Serif", serif; font-size: clamp(68px, 8.2vw, 118px); font-weight: 400; letter-spacing: -0.045em; line-height: 0.88; }
 h1 em { color: var(--muted); font-weight: 400; }
+.overture-intro { width: min(100%, 720px); padding-block: 18px; }
+.overture-intro h2 { margin: 0; font-family: "Instrument Serif", serif; font-size: clamp(44px, 5vw, 68px); font-weight: 400; letter-spacing: -0.035em; line-height: .95; }
+.overture-intro h2 em { color: var(--muted); font-weight: 400; }
+.overture-intro p { margin: 22px 0 0; color: var(--muted); font-size: 14px; }
 .waitlist-panel { width: min(100%, 520px); border: 1px solid var(--line); padding: 34px 36px 30px; text-align: left; }
 .waitlist-panel h2 { margin: 0 0 8px; font-family: "Instrument Serif", serif; font-size: clamp(32px, 3vw, 42px); font-weight: 400; line-height: 1.02; letter-spacing: -0.02em; }
 .waitlist-trigger { width: 100%; display: flex; justify-content: space-between; margin-top: 24px; border: 0; border-bottom: 1px solid var(--line-strong); background: transparent; color: var(--paper); padding: 13px 0; text-align: left; }
