@@ -1,6 +1,6 @@
 window.VOLTAIRE_INITIATIVES = [
   {
-    id: "VR—01",
+    id: "VR—02",
     slug: "nocturne",
     name: "Nocturne",
     domain: "Markets",
@@ -29,7 +29,7 @@ window.VOLTAIRE_INITIATIVES = [
     note: "Exploratory research only. No investment-return claims or operational trading system are presented."
   },
   {
-    id: "VR—02",
+    id: "VR—03",
     slug: "cortex",
     name: "Cortex",
     domain: "Intelligence",
@@ -59,7 +59,7 @@ window.VOLTAIRE_INITIATIVES = [
     note: "Exploratory research into computational intelligence; no claims concerning consciousness or artificial general intelligence."
   },
   {
-    id: "VR—03",
+    id: "VR—01",
     slug: "overture",
     name: "Overture",
     domain: "Sound",
@@ -118,6 +118,6 @@ window.VOLTAIRE_INITIATIVES = [
     status: "Research direction",
     note: "No proprietary data access, institutional partnership or operational forecasting capability is implied."
   }
-];
+].sort((a, b) => a.id.localeCompare(b.id));
 
 window.VOLTAIRE_OUTPUTS = [];
