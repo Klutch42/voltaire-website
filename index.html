@@ -3,99 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Voltaire Research is building intelligence for music." />
-    <meta name="theme-color" content="#062632" />
+    <meta name="description" content="Voltaire Research is an independent computational research studio exploring intelligence, markets, sound and planetary systems." />
+    <meta name="theme-color" content="#0c0c0c" />
     <meta property="og:title" content="Voltaire Research" />
-    <meta property="og:description" content="Building intelligence for music." />
+    <meta property="og:description" content="Researching intelligence, markets and complex systems." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/voltaire-wordmark.png" />
-    <title>Voltaire Research — Intelligence for music</title>
+    <meta property="og:image" content="assets/research/cortex.jpg" />
+    <title>Voltaire Research — Independent Computational Research</title>
     <link rel="icon" href="assets/voltaire-mark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <nav class="shell nav" aria-label="Primary navigation">
-        <a class="brand" href="./" aria-label="Voltaire Research home">
-          <img src="assets/voltaire-mark.png" alt="" />
-          <span>Voltaire Research</span>
-        </a>
-        <div class="nav-links">
-          <a class="journal-link" href="research/">Research</a>
-          <a class="journal-link" href="blog/">Blog</a>
-        </div>
-      </nav>
-    </header>
-
+  <body data-root="./">
+    <div data-site-header></div>
     <main>
-      <section class="shell hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title">Intelligence<br /><em>for music.</em></h1>
+      <section class="institutional-hero site-shell">
+        <p class="meta-label">Independent computational research</p>
+        <h1>Voltaire</h1>
+        <div class="hero-lower">
+          <p class="hero-tagline">Researching intelligence, markets and complex systems.</p>
+          <div>
+            <p class="hero-support">An independent research studio developing computational models, experimental software and new ways of understanding complex systems.</p>
+            <p class="institution-id">Voltaire Research / Est. 2026</p>
+          </div>
         </div>
-
-        <section class="overture-intro" aria-labelledby="overture-title">
-          <h2 id="overture-title">Introducing<br /><em>Voltaire Overture.</em></h2>
-          <p>Add intelligence to your music discovery.</p>
-          <div class="overture-actions">
-            <button class="overture-action primary" type="button" data-waitlist-cta>Try Overture</button>
-            <button class="overture-action secondary" type="button" data-waitlist-cta>
-              <span data-platform-label>Download for desktop</span>
-              <span class="platform-icon" data-platform-icon aria-hidden="true"></span>
-            </button>
-          </div>
-        </section>
-
-        <dialog class="waitlist-dialog" data-waitlist-dialog aria-labelledby="waitlist-title">
-          <button class="modal-close" type="button" data-close-waitlist aria-label="Close waitlist form">×</button>
-          <div class="waitlist-panel" id="waitlist">
-            <h2 id="waitlist-title">Join our waitlist.</h2>
-            <form class="waitlist-form" id="waitlist-form" data-waitlist novalidate>
-            <div class="name-fields">
-              <div class="field">
-                <label for="first-name">First name</label>
-                <input id="first-name" name="firstName" type="text" autocomplete="given-name" required />
-              </div>
-              <div class="field">
-                <label for="last-name">Last name</label>
-                <input id="last-name" name="lastName" type="text" autocomplete="family-name" required />
-              </div>
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
-            </div>
-            <fieldset class="role-field">
-              <legend>I am a</legend>
-              <div class="role-options">
-                <label><input type="radio" name="role" value="student" required /><span>Student</span></label>
-                <label><input type="radio" name="role" value="researcher" /><span>Researcher</span></label>
-                <label><input type="radio" name="role" value="user" /><span>User</span></label>
-              </div>
-            </fieldset>
-            <button class="submit-waitlist" type="submit">Submit <span aria-hidden="true">→</span></button>
-            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-            </form>
-
-            <div class="waitlist-success" data-waitlist-success hidden>
-              <p>Thank you.</p>
-            </div>
-          </div>
-        </dialog>
       </section>
-
-    </main>
-
-    <footer class="site-footer">
-      <div class="shell footer-grid">
-        <div class="footer-meta">
-          <p class="footer-statement">Intelligence<br />for music.</p>
-          <p>© 2026 Voltaire Research</p>
+      <section class="section site-shell" aria-labelledby="initiatives-title">
+        <div class="section-heading"><h2 id="initiatives-title">Research initiatives</h2><span>01 — 04</span></div>
+        <div class="initiative-grid">
+          <a class="initiative-card" href="research/nocturne/"><figure><img src="assets/research/nocturne.jpg" alt="Illustrative grayscale visualization of market microstructure, liquidity and time-series data." /><figcaption>Illustrative visualization</figcaption></figure><div class="initiative-meta"><span>VR—01 / Markets</span><span>View initiative</span></div><h3>Nocturne</h3><p>Computational market intelligence</p></a>
+          <a class="initiative-card" href="research/cortex/"><figure><img src="assets/research/cortex.jpg" alt="Illustrative grayscale neural connectome with biological cells and computational network structures." /><figcaption>Illustrative visualization</figcaption></figure><div class="initiative-meta"><span>VR—02 / Intelligence</span><span>View initiative</span></div><h3>Cortex</h3><p>Artificial and biological intelligence</p></a>
+          <a class="initiative-card" href="research/overture/"><figure><img src="assets/research/overture.jpg" alt="Illustrative grayscale audio waveform, spectrogram and harmonic frequency visualization." /><figcaption>Illustrative visualization</figcaption></figure><div class="initiative-meta"><span>VR—03 / Sound</span><span>View initiative</span></div><h3>Overture</h3><p>Machine intelligence for music</p></a>
+          <a class="initiative-card" href="research/orbital/"><figure><img src="assets/research/orbital.jpg" alt="Illustrative grayscale Earth-observation image with topographic data, geospatial grids and orbital tracks." /><figcaption>Illustrative visualization</figcaption></figure><div class="initiative-meta"><span>VR—04 / Planetary</span><span>View initiative</span></div><h3>Orbital</h3><p>Planetary intelligence systems</p></a>
         </div>
-      </div>
-    </footer>
-    <script src="site.js"></script>
+      </section>
+      <section class="section site-shell statement-section" aria-labelledby="statement-title">
+        <div class="section-heading"><h2 id="statement-title">Research statement</h2><span>Voltaire / 2026</span></div>
+        <div class="statement-copy"><p>Voltaire is an independent research studio examining the computational principles underlying intelligence, markets, sound and the physical world. Our work encompasses mathematical modeling, machine learning, experimental software and the development of new computational systems.</p><p>Research initiatives are developed independently, with an emphasis on experimentation, reproducibility and the translation of theoretical ideas into working systems.</p></div>
+      </section>
+      <section class="section site-shell" aria-labelledby="index-title">
+        <div class="section-heading"><h2 id="index-title">Research index</h2><a href="index/">Open archive</a></div>
+        <div class="archive-table" role="table" aria-label="Research outputs"><div class="archive-head" role="row"><span>Identifier</span><span>Title</span><span>Initiative</span><span>Type</span><span>Date</span></div><p class="empty-state">Research notes and experimental results will be published here.</p></div>
+      </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="shared.js"></script>
   </body>
 </html>
