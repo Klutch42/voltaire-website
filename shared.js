@@ -36,7 +36,7 @@
         <div class="site-shell footer-grid">
           <div>
             <p class="footer-wordmark">Voltaire Research</p>
-            <p class="footer-description">Independent computational research.</p>
+            <p class="footer-description">Independent intelligence research.</p>
           </div>
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="${root}research/">Research</a>
